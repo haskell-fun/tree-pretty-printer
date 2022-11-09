@@ -14,7 +14,6 @@ dependencies:
 - generic-aeson
 
 default-extensions:
-- OverloadedStrings
 - OverloadedLists
 
 ghc-options:
@@ -51,7 +50,7 @@ tests:
     - hspec
     - hspec-discover
     - QuickCheck
-    - raw-strings-qq
+    - neat-interpolation
 
 
 verbatim:
