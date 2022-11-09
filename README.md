@@ -1,3 +1,5 @@
+[![CI](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml/badge.svg)](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml)
+
 # tree-pretty-printer
 
 ## How to build and run locally
