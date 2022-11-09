@@ -15,6 +15,7 @@ dependencies:
 
 default-extensions:
 - OverloadedStrings
+- OverloadedLists
 
 ghc-options:
   - -Wall
@@ -50,6 +51,7 @@ tests:
     - hspec
     - hspec-discover
     - QuickCheck
+    - raw-strings-qq
 
 
 verbatim:
