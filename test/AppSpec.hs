@@ -4,18 +4,18 @@ module AppSpec where
 
 import App
 import Test.Hspec
-import Test.Hspec.QuickCheck
-import Test.QuickCheck.Property
 
-import Data.List.NonEmpty
 import NeatInterpolation
 
 
-tree1 = Leaf "a"
+tree1 :: Tree Char
+tree1 = Leaf 'a'
 
+tree2 :: Tree Char
 tree2 = Branch 'a' [Leaf 'b',
                     Leaf 'c']
 
+tree3 :: Tree Char
 tree3 = Branch 'a' [Branch 'd'
                       [Branch 'e'
                          [Leaf 'f']],
@@ -45,3 +45,12 @@ spec = describe "Simple test" $ do
                                    ------f
                                    --b
                                    --c|]
+
+     it "pretty == prettyWithDepth 1" $
+        pretty' tree1 `shouldBe` prettyWithDepth' tree1
+
+     it "pretty == prettyWithDepth 2" $
+        pretty' tree2 `shouldBe` prettyWithDepth' tree2
+
+     it "pretty == prettyWithDepth 3" $
+        pretty' tree3 `shouldBe` prettyWithDepth' tree3
