@@ -1,0 +1,14 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "tree-pretty-printer:lib"
+
+    - path: "./app/Main.hs"
+      component: "tree-pretty-printer:exe:tree-pretty-printer-exe"
+
+    - path: "./app/Paths_tree-pretty-printer.hs"
+      component: "tree-pretty-printer:exe:tree-pretty-printer-exe"
+
+    - path: "./test"
+      component: "tree-pretty-printer:test:tree-pretty-printer-test"
+
