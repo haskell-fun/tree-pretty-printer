@@ -2,24 +2,11 @@
 
 module AppSpec where
 
-import App
+import Tree(Tree, Tree(..), pretty')
+import Examples
 import Test.Hspec
 
 import NeatInterpolation
-
-
-tree1 = Leaf "a"
-
-tree2 = Branch 'a' [Leaf 'b',
-                    Leaf 'c']
-
-tree3 = Branch 'a' [Branch 'd'
-                      [Branch 'e'
-                         [Leaf 'f']],
-                    Leaf 'b',
-                    Leaf 'c']
-
-
 
 spec :: Spec
 spec = describe "Simple test" $ do
