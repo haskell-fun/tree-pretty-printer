@@ -1,4 +1,4 @@
-[![CI](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml/badge.svg)](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml)
+[![CI](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml/badge.svg)](https://github.com/haskell-fun/tree-pretty-printer/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/haskell-fun/tree-pretty-printer/branch/main/graph/badge.svg?token=QHTHLT60VA)](https://codecov.io/gh/haskell-fun/tree-pretty-printer)
 
 # tree-pretty-printer
 
