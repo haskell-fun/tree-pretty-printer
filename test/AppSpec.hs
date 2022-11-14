@@ -4,10 +4,7 @@ module AppSpec where
 
 import App
 import Test.Hspec
-import Test.Hspec.QuickCheck
-import Test.QuickCheck.Property
 
-import Data.List.NonEmpty
 import NeatInterpolation
 
 

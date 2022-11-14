@@ -2,8 +2,11 @@
 
 module App where
 
-import Data.List.NonEmpty
+import Data.List.NonEmpty ( toList, NonEmpty )
 import Data.Text (Text(), pack)
+import Data.Foldable (fold)
+
+import Data.List(intercalate)
 
 
 program :: IO ()
@@ -18,13 +21,18 @@ data Tree a = Leaf a
 
 
 pretty :: CustomShow a => Tree a -> String
-pretty (Leaf x) = customShow x
-pretty (Branch x y) = customShow x ++ childrenStr
-  where
-    childrenLines        = lines . pretty <$> y
-    childrenLinesConcatd = mconcat $ toList childrenLines
-    childrenFormatted    = ("--" ++) <$> childrenLinesConcatd
-    childrenStr          = foldMap ("\n" ++) childrenFormatted
+pretty = pretty2 0
+
+
+pretty2 :: CustomShow a => Int -> Tree a -> String
+pretty2 n (Leaf x) = customShow2 n x
+pretty2 n (Branch x y) = intercalate "\n" (customShow2 n x :
+                                           toList (fmap (pretty2 (n + 1)) y))
+
+
+customShow2 :: CustomShow a => Int -> a -> String
+customShow2 0 a = customShow a
+customShow2 n a = fold (take n (repeat "--")) ++ customShow a
 
 
 
